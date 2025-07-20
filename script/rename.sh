@@ -1,36 +1,62 @@
 #!/bin/bash
 
-# 检查是否提供目录参数
-if [ -z "$1" ]; then
-  echo "请提供目标目录路径。用法: $0 /path/to/main_dir"
-  exit 1
-fi
+# 定义目标目录列表
+TARGET_DIRS=(
+  "./origin_data/throughput/congest"
+  "./origin_data/throughput/rain"
+  "./origin_data/throughput/random_loss"
+  "./origin_data/throughput/reconfig&hadover"
+  "./origin_data/standard"
+  "./origin_data/intra-protocol/2flow"
+  "./origin_data/intra-protocol/3flow"
+  "./origin_data/inter-protocol"
+)
 
-TARGET_DIR="$1"
-
-# 检查目录是否存在
-if [ ! -d "$TARGET_DIR" ]; then
-  echo "目录 $TARGET_DIR 不存在！"
-  exit 1
-fi
-
-# 遍历所有子文件夹
-for subdir in "$TARGET_DIR"/*/; do
-  folder_name=$(basename "$subdir")
-  tmp_file="${subdir}tmp.txt"
-  new_txt="${subdir}${folder_name}.txt"
-
-  # 重命名 tmp.txt -> 文件夹名.txt
+# 递归处理目录函数
+process_dir() {
+  local dir="$1"
+  local folder_name=$(basename "$dir")
+  
+  # 处理当前目录中的文件
+  tmp_file="$dir/tmp.txt"
+  new_txt="$dir/$folder_name.txt"
   if [ -f "$tmp_file" ]; then
     mv "$tmp_file" "$new_txt"
     echo "已将 $tmp_file 重命名为 $new_txt"
   fi
 
-  # 查找所有 .json 文件（只处理第一个）
-  json_file=$(find "$subdir" -maxdepth 1 -name "*.json" | head -n 1)
+  json_file=$(find "$dir" -maxdepth 1 -name "*.json" | head -n 1)
   if [ -n "$json_file" ]; then
-    new_json="${subdir}${folder_name}.json"
+    new_json="$dir/$folder_name.json"
     mv "$json_file" "$new_json"
     echo "已将 $json_file 重命名为 $new_json"
   fi
+
+  pcc_log="$dir/pcc_log"
+  if [ -f "$pcc_log" ]; then
+    mv "$pcc_log" "$dir/PCC"
+    echo "已将 $pcc_log 重命名为 $dir/PCC"
+  fi
+
+  # 递归处理子目录
+  for subdir in "$dir"/*/; do
+    if [ -d "$subdir" ]; then
+      process_dir "$subdir"
+    fi
+  done
+}
+
+# 主循环：处理所有目标目录
+for target in "${TARGET_DIRS[@]}"; do
+  # 解析为绝对路径（避免相对路径问题）
+  target_dir=$(cd "$target" 2>/dev/null && pwd)
+  if [ -z "$target_dir" ]; then
+    echo "警告：目录不存在或无法访问 -> $target"
+    continue
+  fi
+
+  echo "正在处理目录: $target_dir"
+  process_dir "$target_dir"
 done
+
+echo "所有目录处理完成"

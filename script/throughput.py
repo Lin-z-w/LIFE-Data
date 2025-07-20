@@ -50,6 +50,45 @@ config_changes = [
     (105, 98.54)
 ]
 
+def parse_pcc_log_files(directory, max_time=120, bin_width=1.0):
+    """Parse PCC log files and extract SendRate data"""
+    results = {}
+    pattern = os.path.join(directory, '**', 'pcc_log')
+    for filepath in glob.glob(pattern, recursive=True):
+        name = os.path.basename(os.path.dirname(filepath)) or "pcc"
+        times, sendrates = [], []
+        with open(filepath, 'r') as f:
+            # Skip header line
+            next(f)
+            for line in f:
+                parts = line.strip().split()
+                if len(parts) < 2:
+                    continue
+                try:
+                    sendrate = float(parts[0])
+                    # Assume each line represents 1 second interval
+                    t = len(times)
+                    if t > max_time:
+                        continue
+                    times.append(t)
+                    sendrates.append(sendrate)
+                except (ValueError, IndexError):
+                    continue
+        
+        if not times:
+            continue
+            
+        # Bin the data if needed (similar to iperf processing)
+        bins = np.arange(0, max_time + bin_width, bin_width)
+        inds = np.digitize(times, bins)
+        avg_sendrate, centers = [], []
+        for i in range(1, len(bins)):
+            mask = (inds == i)
+            avg_sendrate.append(np.mean(np.array(sendrates)[mask]) if np.any(mask) else 0.0)
+            centers.append((bins[i-1] + bins[i]) / 2)
+        
+        results[name] = (centers, avg_sendrate)
+    return results
 
 def parse_iperf_json_files(directory, max_time=120, bin_width=1.0):
     results = {}
@@ -119,11 +158,11 @@ def make_reference_segments(config_changes, max_time=120):
         segs.append((t_start, t_end, bw_mbps))
     return segs
 
-
-def plot_all_series(iperf_dict, qperf_dict, config_changes, output_path=None, draw_config=True):
+def plot_all_series(iperf_dict, qperf_dict, pcc_dict, config_changes, output_path=None, draw_config=True):
     fig, ax = plt.subplots()
     iperf_style = {'marker': 'o', 'markersize': 2, 'markevery': 15, 'linewidth': 0.8, 'markeredgewidth': 0.3}
     qperf_style = {'marker': 's', 'markersize': 2, 'markevery': 15, 'linewidth': 0.8, 'markeredgewidth': 0.3}
+    pcc_style = {'marker': '^', 'markersize': 2, 'markevery': 15, 'linewidth': 0.8, 'markeredgewidth': 0.3}
     plotted_lines = []
 
     for name, (times, bws) in iperf_dict.items():
@@ -132,6 +171,9 @@ def plot_all_series(iperf_dict, qperf_dict, config_changes, output_path=None, dr
     for name, (times, bws) in qperf_dict.items():
         line = ax.plot(times, bws, label=name.replace('_', ' '), **qperf_style)[0]
         plotted_lines.append((line, times, bws))
+    for name, (times, sendrates) in pcc_dict.items():
+        line = ax.plot(times, sendrates, label=f"{name} (PCC)", **pcc_style)[0]
+        plotted_lines.append((line, times, sendrates))
 
     if draw_config:
         segs = make_reference_segments(config_changes)
@@ -177,23 +219,26 @@ def plot_all_series(iperf_dict, qperf_dict, config_changes, output_path=None, dr
     else:
         plt.show()
 
-
 def main():
     parser = argparse.ArgumentParser(description='Plot bandwidth logs in given directory')
-    parser.add_argument('dir', help='Directory containing .json and .txt logs (searches recursively)')
+    parser.add_argument('dir', help='Directory containing .json, .txt and pcc_log files (searches recursively)')
     parser.add_argument('--output', '-o', help='Output path for figure')
     parser.add_argument('--no-config', action='store_true', help='Do not plot config change lines or reference')
     args = parser.parse_args()
     if not os.path.isdir(args.dir):
         print(f"Error: '{args.dir}' is not a valid directory.")
         return
+    
+    # Parse all three types of log files
     iperf_data = parse_iperf_json_files(args.dir)
     qperf_data = parse_qperf_txt_files(args.dir)
-    if not iperf_data and not qperf_data:
+    pcc_data = parse_pcc_log_files(args.dir)
+    
+    if not iperf_data and not qperf_data and not pcc_data:
         print("No data files found.")
         return
-    plot_all_series(iperf_data, qperf_data, config_changes, args.output, draw_config=not args.no_config)
-
+    
+    plot_all_series(iperf_data, qperf_data, pcc_data, config_changes, args.output, draw_config=not args.no_config)
 
 if __name__ == '__main__':
     main()
