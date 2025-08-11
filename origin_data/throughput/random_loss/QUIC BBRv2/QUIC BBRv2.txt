@@ -1,0 +1,186 @@
+option log level :e
+option addr :192.168.12.3
+option cong_ctl : B: B: plus? 0
+option port :8444
+option send_body_size :1024
+option req_max :1
+option g_conn_timeout :3
+option log path :client_log.txt
+option echo check :on
+congestion control flags: 0
+read token size 9
+conn type: 0
+scid:0563dd2c3c668b93
+/home/cnic/quic-base/xqperf/xqperf_client.c:1830 (xqc_client_h3_conn_create_notify)
+xqc_h3_conn_is_ready_to_send_early_data:1
+[h3-dgram]|prepare_dgram_user_data|
+xqc_h3_request_send_headers success size=37
+OS default udp socket recv buff size is: 425984
+set udp socket(9) recv buff size to 425984 OK!!!
+scid:0563dd2c3c668b93
+scid:0563dd2c3c668b93
+scid:0563dd2c3c668b93
+scid:0563dd2c3c668b93
+save_tp_cb use server domain as the key. h3[0]
+/home/cnic/quic-base/xqperf/xqperf_client.c:1891 (xqc_client_h3_conn_handshake_finished)
+0rtt_flag:2
+====>DCID:b0b5a24c9c0f3805
+====>SCID:0563dd2c3c668b93
+save_session_cb use server domain as the key. h3[0]
+save_session_cb use server domain as the key. h3[0]
+/home/cnic/quic-base/xqperf/xqperf_client.c:1938 (xqc_client_h3_conn_ping_acked_notify)
+====>no ping_id
+/home/cnic/quic-base/xqperf/xqperf_client.c:1938 (xqc_client_h3_conn_ping_acked_notify)
+====>ping_id:1
+:method = POST
+:scheme = https
+:path = /path/resource
+:status = 200
+host = test.xquic.com
+content-type = text/plain
+[qperf]|log_cnt:0|ts:1753781098034258|last_recv_log_time:1753781097023171|qperf_speed:69203Kbit/s|
+[qperf]|log_cnt:1|ts:1753781099034372|last_recv_log_time:1753781098034258|qperf_speed:80007Kbit/s|
+[qperf]|log_cnt:2|ts:1753781100034459|last_recv_log_time:1753781099034372|qperf_speed:84380Kbit/s|
+[qperf]|log_cnt:3|ts:1753781101034555|last_recv_log_time:1753781100034459|qperf_speed:89916Kbit/s|
+[qperf]|log_cnt:4|ts:1753781102044810|last_recv_log_time:1753781101034555|qperf_speed:78344Kbit/s|
+[qperf]|log_cnt:5|ts:1753781103047712|last_recv_log_time:1753781102044810|qperf_speed:86401Kbit/s|
+[qperf]|log_cnt:6|ts:1753781104047780|last_recv_log_time:1753781103047712|qperf_speed:87829Kbit/s|
+[qperf]|log_cnt:7|ts:1753781105056633|last_recv_log_time:1753781104047780|qperf_speed:78070Kbit/s|
+[qperf]|log_cnt:8|ts:1753781106075371|last_recv_log_time:1753781105056633|qperf_speed:85446Kbit/s|
+[qperf]|log_cnt:9|ts:1753781107075488|last_recv_log_time:1753781106075371|qperf_speed:88023Kbit/s|
+[qperf]|log_cnt:10|ts:1753781108078919|last_recv_log_time:1753781107075488|qperf_speed:80156Kbit/s|
+[qperf]|log_cnt:11|ts:1753781109079291|last_recv_log_time:1753781108078919|qperf_speed:88434Kbit/s|
+[qperf]|log_cnt:12|ts:1753781110083682|last_recv_log_time:1753781109079291|qperf_speed:87545Kbit/s|
+[qperf]|log_cnt:13|ts:1753781111091247|last_recv_log_time:1753781110083682|qperf_speed:87218Kbit/s|
+[qperf]|log_cnt:14|ts:1753781112091302|last_recv_log_time:1753781111091247|qperf_speed:93121Kbit/s|
+[qperf]|log_cnt:15|ts:1753781113105523|last_recv_log_time:1753781112091302|qperf_speed:75927Kbit/s|
+[qperf]|log_cnt:16|ts:1753781114115539|last_recv_log_time:1753781113105523|qperf_speed:82178Kbit/s|
+[qperf]|log_cnt:17|ts:1753781115121114|last_recv_log_time:1753781114115539|qperf_speed:86865Kbit/s|
+[qperf]|log_cnt:18|ts:1753781116121812|last_recv_log_time:1753781115121114|qperf_speed:91077Kbit/s|
+[qperf]|log_cnt:19|ts:1753781117148063|last_recv_log_time:1753781116121812|qperf_speed:88883Kbit/s|
+[qperf]|log_cnt:20|ts:1753781118153822|last_recv_log_time:1753781117148063|qperf_speed:91275Kbit/s|
+[qperf]|log_cnt:21|ts:1753781119157714|last_recv_log_time:1753781118153822|qperf_speed:89341Kbit/s|
+[qperf]|log_cnt:22|ts:1753781120162828|last_recv_log_time:1753781119157714|qperf_speed:68531Kbit/s|
+[qperf]|log_cnt:23|ts:1753781121163395|last_recv_log_time:1753781120162828|qperf_speed:69177Kbit/s|
+[qperf]|log_cnt:24|ts:1753781122163411|last_recv_log_time:1753781121163395|qperf_speed:84660Kbit/s|
+[qperf]|log_cnt:25|ts:1753781123163445|last_recv_log_time:1753781122163411|qperf_speed:80074Kbit/s|
+[qperf]|log_cnt:26|ts:1753781124163518|last_recv_log_time:1753781123163445|qperf_speed:76525Kbit/s|
+[qperf]|log_cnt:27|ts:1753781125183649|last_recv_log_time:1753781124163518|qperf_speed:75034Kbit/s|
+[qperf]|log_cnt:28|ts:1753781126203920|last_recv_log_time:1753781125183649|qperf_speed:88923Kbit/s|
+[qperf]|log_cnt:29|ts:1753781127221488|last_recv_log_time:1753781126203920|qperf_speed:86963Kbit/s|
+[qperf]|log_cnt:30|ts:1753781128228817|last_recv_log_time:1753781127221488|qperf_speed:78296Kbit/s|
+[qperf]|log_cnt:31|ts:1753781129233277|last_recv_log_time:1753781128228817|qperf_speed:81590Kbit/s|
+[qperf]|log_cnt:32|ts:1753781130261212|last_recv_log_time:1753781129233277|qperf_speed:85691Kbit/s|
+[qperf]|log_cnt:33|ts:1753781131264846|last_recv_log_time:1753781130261212|qperf_speed:88349Kbit/s|
+[qperf]|log_cnt:34|ts:1753781132283681|last_recv_log_time:1753781131264846|qperf_speed:87225Kbit/s|
+[qperf]|log_cnt:35|ts:1753781133297460|last_recv_log_time:1753781132283681|qperf_speed:75937Kbit/s|
+[qperf]|log_cnt:36|ts:1753781134297767|last_recv_log_time:1753781133297460|qperf_speed:80180Kbit/s|
+[qperf]|log_cnt:37|ts:1753781135302835|last_recv_log_time:1753781134297767|qperf_speed:78505Kbit/s|
+[qperf]|log_cnt:38|ts:1753781136315390|last_recv_log_time:1753781135302835|qperf_speed:80006Kbit/s|
+[qperf]|log_cnt:39|ts:1753781137331720|last_recv_log_time:1753781136315390|qperf_speed:89296Kbit/s|
+[qperf]|log_cnt:40|ts:1753781138331750|last_recv_log_time:1753781137331720|qperf_speed:91256Kbit/s|
+[qperf]|log_cnt:41|ts:1753781139340076|last_recv_log_time:1753781138331750|qperf_speed:86960Kbit/s|
+[qperf]|log_cnt:42|ts:1753781140340167|last_recv_log_time:1753781139340076|qperf_speed:91996Kbit/s|
+[qperf]|log_cnt:43|ts:1753781141340210|last_recv_log_time:1753781140340167|qperf_speed:90486Kbit/s|
+[qperf]|log_cnt:44|ts:1753781142346774|last_recv_log_time:1753781141340210|qperf_speed:87571Kbit/s|
+[qperf]|log_cnt:45|ts:1753781143347104|last_recv_log_time:1753781142346774|qperf_speed:88584Kbit/s|
+[qperf]|log_cnt:46|ts:1753781144347175|last_recv_log_time:1753781143347104|qperf_speed:84009Kbit/s|
+[qperf]|log_cnt:47|ts:1753781145357663|last_recv_log_time:1753781144347175|qperf_speed:87530Kbit/s|
+[qperf]|log_cnt:48|ts:1753781146390893|last_recv_log_time:1753781145357663|qperf_speed:84412Kbit/s|
+[qperf]|log_cnt:49|ts:1753781147410551|last_recv_log_time:1753781146390893|qperf_speed:83723Kbit/s|
+[qperf]|log_cnt:50|ts:1753781148417028|last_recv_log_time:1753781147410551|qperf_speed:86206Kbit/s|
+[qperf]|log_cnt:51|ts:1753781149446930|last_recv_log_time:1753781148417028|qperf_speed:86004Kbit/s|
+[qperf]|log_cnt:52|ts:1753781150462069|last_recv_log_time:1753781149446930|qperf_speed:87552Kbit/s|
+[qperf]|log_cnt:53|ts:1753781151462093|last_recv_log_time:1753781150462069|qperf_speed:84070Kbit/s|
+[qperf]|log_cnt:54|ts:1753781152474566|last_recv_log_time:1753781151462093|qperf_speed:86576Kbit/s|
+[qperf]|log_cnt:55|ts:1753781153478160|last_recv_log_time:1753781152474566|qperf_speed:88089Kbit/s|
+[qperf]|log_cnt:56|ts:1753781154479100|last_recv_log_time:1753781153478160|qperf_speed:89340Kbit/s|
+[qperf]|log_cnt:57|ts:1753781155481243|last_recv_log_time:1753781154479100|qperf_speed:87605Kbit/s|
+[qperf]|log_cnt:58|ts:1753781156483727|last_recv_log_time:1753781155481243|qperf_speed:83346Kbit/s|
+[qperf]|log_cnt:59|ts:1753781157484677|last_recv_log_time:1753781156483727|qperf_speed:83417Kbit/s|
+[qperf]|log_cnt:60|ts:1753781158501830|last_recv_log_time:1753781157484677|qperf_speed:85329Kbit/s|
+[qperf]|log_cnt:61|ts:1753781159509518|last_recv_log_time:1753781158501830|qperf_speed:86308Kbit/s|
+[qperf]|log_cnt:62|ts:1753781160529913|last_recv_log_time:1753781159509518|qperf_speed:85252Kbit/s|
+[qperf]|log_cnt:63|ts:1753781161529972|last_recv_log_time:1753781160529913|qperf_speed:85802Kbit/s|
+[qperf]|log_cnt:64|ts:1753781162530133|last_recv_log_time:1753781161529972|qperf_speed:82460Kbit/s|
+[qperf]|log_cnt:65|ts:1753781163542237|last_recv_log_time:1753781162530133|qperf_speed:87362Kbit/s|
+[qperf]|log_cnt:66|ts:1753781164542278|last_recv_log_time:1753781163542237|qperf_speed:90152Kbit/s|
+[qperf]|log_cnt:67|ts:1753781165542836|last_recv_log_time:1753781164542278|qperf_speed:88988Kbit/s|
+[qperf]|log_cnt:68|ts:1753781166556947|last_recv_log_time:1753781165542836|qperf_speed:76958Kbit/s|
+[qperf]|log_cnt:69|ts:1753781167556969|last_recv_log_time:1753781166556947|qperf_speed:92634Kbit/s|
+[qperf]|log_cnt:70|ts:1753781168585697|last_recv_log_time:1753781167556969|qperf_speed:86445Kbit/s|
+[qperf]|log_cnt:71|ts:1753781169585764|last_recv_log_time:1753781168585697|qperf_speed:85641Kbit/s|
+[qperf]|log_cnt:72|ts:1753781170585779|last_recv_log_time:1753781169585764|qperf_speed:87584Kbit/s|
+[qperf]|log_cnt:73|ts:1753781171585879|last_recv_log_time:1753781170585779|qperf_speed:89076Kbit/s|
+[qperf]|log_cnt:74|ts:1753781172612565|last_recv_log_time:1753781171585879|qperf_speed:84238Kbit/s|
+[qperf]|log_cnt:75|ts:1753781173634530|last_recv_log_time:1753781172612565|qperf_speed:87779Kbit/s|
+[qperf]|log_cnt:76|ts:1753781174660550|last_recv_log_time:1753781173634530|qperf_speed:86292Kbit/s|
+[qperf]|log_cnt:77|ts:1753781175660575|last_recv_log_time:1753781174660550|qperf_speed:91351Kbit/s|
+[qperf]|log_cnt:78|ts:1753781176669400|last_recv_log_time:1753781175660575|qperf_speed:79428Kbit/s|
+[qperf]|log_cnt:79|ts:1753781177680279|last_recv_log_time:1753781176669400|qperf_speed:88677Kbit/s|
+[qperf]|log_cnt:80|ts:1753781178680299|last_recv_log_time:1753781177680279|qperf_speed:93955Kbit/s|
+[qperf]|log_cnt:81|ts:1753781179683358|last_recv_log_time:1753781178680299|qperf_speed:86786Kbit/s|
+[qperf]|log_cnt:82|ts:1753781180703673|last_recv_log_time:1753781179683358|qperf_speed:80295Kbit/s|
+[qperf]|log_cnt:83|ts:1753781181703883|last_recv_log_time:1753781180703673|qperf_speed:88180Kbit/s|
+[qperf]|log_cnt:84|ts:1753781182719382|last_recv_log_time:1753781181703883|qperf_speed:86824Kbit/s|
+[qperf]|log_cnt:85|ts:1753781183745134|last_recv_log_time:1753781182719382|qperf_speed:85441Kbit/s|
+[qperf]|log_cnt:86|ts:1753781184745202|last_recv_log_time:1753781183745134|qperf_speed:90555Kbit/s|
+[qperf]|log_cnt:87|ts:1753781185757697|last_recv_log_time:1753781184745202|qperf_speed:83882Kbit/s|
+[qperf]|log_cnt:88|ts:1753781186757847|last_recv_log_time:1753781185757697|qperf_speed:89109Kbit/s|
+[qperf]|log_cnt:89|ts:1753781187757906|last_recv_log_time:1753781186757847|qperf_speed:84227Kbit/s|
+[qperf]|log_cnt:90|ts:1753781188765308|last_recv_log_time:1753781187757906|qperf_speed:85354Kbit/s|
+[qperf]|log_cnt:91|ts:1753781189792132|last_recv_log_time:1753781188765308|qperf_speed:89385Kbit/s|
+[qperf]|log_cnt:92|ts:1753781190809418|last_recv_log_time:1753781189792132|qperf_speed:87673Kbit/s|
+[qperf]|log_cnt:93|ts:1753781191823939|last_recv_log_time:1753781190809418|qperf_speed:78559Kbit/s|
+[qperf]|log_cnt:94|ts:1753781192848355|last_recv_log_time:1753781191823939|qperf_speed:85516Kbit/s|
+[qperf]|log_cnt:95|ts:1753781193848381|last_recv_log_time:1753781192848355|qperf_speed:90295Kbit/s|
+[qperf]|log_cnt:96|ts:1753781194848772|last_recv_log_time:1753781193848381|qperf_speed:81285Kbit/s|
+[qperf]|log_cnt:97|ts:1753781195872419|last_recv_log_time:1753781194848772|qperf_speed:75528Kbit/s|
+[qperf]|log_cnt:98|ts:1753781196880388|last_recv_log_time:1753781195872419|qperf_speed:83421Kbit/s|
+[qperf]|log_cnt:99|ts:1753781197906417|last_recv_log_time:1753781196880388|qperf_speed:86567Kbit/s|
+[qperf]|log_cnt:100|ts:1753781198914120|last_recv_log_time:1753781197906417|qperf_speed:89057Kbit/s|
+[qperf]|log_cnt:101|ts:1753781199938078|last_recv_log_time:1753781198914120|qperf_speed:88523Kbit/s|
+[qperf]|log_cnt:102|ts:1753781200941918|last_recv_log_time:1753781199938078|qperf_speed:86317Kbit/s|
+[qperf]|log_cnt:103|ts:1753781201941980|last_recv_log_time:1753781200941918|qperf_speed:83462Kbit/s|
+[qperf]|log_cnt:104|ts:1753781202946374|last_recv_log_time:1753781201941980|qperf_speed:84402Kbit/s|
+[qperf]|log_cnt:105|ts:1753781203946473|last_recv_log_time:1753781202946374|qperf_speed:89418Kbit/s|
+[qperf]|log_cnt:106|ts:1753781204946573|last_recv_log_time:1753781203946473|qperf_speed:88181Kbit/s|
+[qperf]|log_cnt:107|ts:1753781205951855|last_recv_log_time:1753781204946573|qperf_speed:75940Kbit/s|
+[qperf]|log_cnt:108|ts:1753781206951866|last_recv_log_time:1753781205951855|qperf_speed:83692Kbit/s|
+[qperf]|log_cnt:109|ts:1753781207951935|last_recv_log_time:1753781206951866|qperf_speed:81868Kbit/s|
+[qperf]|log_cnt:110|ts:1753781208953640|last_recv_log_time:1753781207951935|qperf_speed:72270Kbit/s|
+[qperf]|log_cnt:111|ts:1753781209953688|last_recv_log_time:1753781208953640|qperf_speed:90278Kbit/s|
+[qperf]|log_cnt:112|ts:1753781210953792|last_recv_log_time:1753781209953688|qperf_speed:86978Kbit/s|
+[qperf]|log_cnt:113|ts:1753781211953929|last_recv_log_time:1753781210953792|qperf_speed:86768Kbit/s|
+[qperf]|log_cnt:114|ts:1753781212954024|last_recv_log_time:1753781211953929|qperf_speed:78661Kbit/s|
+[qperf]|log_cnt:115|ts:1753781213973485|last_recv_log_time:1753781212954024|qperf_speed:78130Kbit/s|
+[qperf]|log_cnt:116|ts:1753781214973543|last_recv_log_time:1753781213973485|qperf_speed:81902Kbit/s|
+[qperf]|log_cnt:117|ts:1753781215978722|last_recv_log_time:1753781214973543|qperf_speed:76827Kbit/s|
+[qperf]|log_cnt:118|ts:1753781216999932|last_recv_log_time:1753781215978722|qperf_speed:74015Kbit/s|
+[qperf]|log_cnt:119|ts:1753781218028159|last_recv_log_time:1753781216999932|qperf_speed:91410Kbit/s|
+[qperf]|log_cnt:120|ts:1753781219035222|last_recv_log_time:1753781218028159|qperf_speed:87740Kbit/s|
+[qperf]|log_cnt:121|ts:1753781220041150|last_recv_log_time:1753781219035222|qperf_speed:89829Kbit/s|
+[qperf]|log_cnt:122|ts:1753781221043654|last_recv_log_time:1753781220041150|qperf_speed:84473Kbit/s|
+[qperf]|log_cnt:123|ts:1753781222061539|last_recv_log_time:1753781221043654|qperf_speed:93114Kbit/s|
+[qperf]|log_cnt:124|ts:1753781223082496|last_recv_log_time:1753781222061539|qperf_speed:79300Kbit/s|
+[qperf]|log_cnt:125|ts:1753781224093510|last_recv_log_time:1753781223082496|qperf_speed:83436Kbit/s|
+[qperf]|log_cnt:126|ts:1753781225113478|last_recv_log_time:1753781224093510|qperf_speed:85902Kbit/s|
+[qperf]|log_cnt:127|ts:1753781226118037|last_recv_log_time:1753781225113478|qperf_speed:83570Kbit/s|
+[qperf]|log_cnt:128|ts:1753781227128389|last_recv_log_time:1753781226118037|qperf_speed:79044Kbit/s|
+[33m>>>>>>>> request time cost:131081235 us, speed:84839 Kbit/s 
+>>>>>>>> send_body_size:1024, recv_body_size:1390108697 [0m
+test_result_speed: 84839 Kbit/s. request_cnt: 1.
+retx:0, sent:3, max_pto:0
+[rr_benchmark]|request_time:131081235|request_size:1024|response_size:11148934|
+/home/cnic/quic-base/xqperf/xqperf_client.c:2921 (xqc_client_request_close_notify)
+send_body_size:1024, recv_body_size:1390108697, send_header_size:100, recv_header_size:92, recv_fin:1, err:0, mp_state:0, cellular_send_weight:0.00, cellular_recv_weight:0.00, stream_info:(1,0,0/0/1/a/a,1066,1390108777,0,0,35)#0-3-1179973-2132-1390111127-31021-2
+retx:0, sent:3, max_pto:0
+>>>>>>>> pass:0
+xqc_client_timeout_callback | conn_close
+conn closing: 0
+/home/cnic/quic-base/xqperf/xqperf_client.c:1850 (xqc_client_h3_conn_close_notify)
+conn errno:256
+should_clear_0rtt_ticket, conn_err:256, clear_0rtt_ticket:0
+send_count:6717, lost_count:39, fec_fix_count: 0, tlp_count:1, recv_count:1186937, srtt:31021 early_data_flag:2, conn_err:0, mp_state:0, ack_info:#1191628-1191412#1191410-1191371#1191369-1190736#, alpn:h3
+tmp_cnt1: 1186937, tmp_cnt2: 1186937, tmp_cnt3: 1186937
+[h3-dgram]|recv_dgram_bytes:0|sent_dgram_bytes:0|lost_dgram_bytes:0|lost_cnt:0|

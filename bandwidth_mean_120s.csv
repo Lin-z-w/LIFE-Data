@@ -1,0 +1,81 @@
+key,mean_bw_Mbps
+groud/LIFE+QUIC BBRv2/LIFE,7.896
+groud/LIFE+QUIC BBRv2/QUIC BBRv2,85.401
+groud/LIFE+PCC/PCC,25.128
+groud/LIFE+PCC/LIFE,68.744
+groud/LIFE+QUIC Reno/LIFE,55.625
+groud/LIFE+QUIC Reno/QUIC Reno,37.951
+groud/LIFE+QUIC BBR/LIFE,3.276
+groud/LIFE+QUIC BBR/QUIC BBR,90.181
+groud/LIFE+QUIC Copa/LIFE,39.438
+groud/LIFE+QUIC Copa/QUIC Copa,54.167
+groud/LIFE+QUIC Cubic/LIFE,57.448
+groud/LIFE+QUIC Cubic/QUIC Cubic,36.111
+groud/LIFE+SATPIPE/LIFE,3.322
+groud/LIFE+SATPIPE/SATPIPE,90.014
+groud/LIFE+SaTCP/LIFE,56.441
+groud/LIFE+SaTCP/SaTCP,37.169
+rain/LIFE+QUIC BBRv2/LIFE,32.817
+rain/LIFE+QUIC BBRv2/QUIC BBRv2,28.751
+rain/LIFE+PCC/PCC,12.881
+rain/LIFE+PCC/LIFE,48.927
+rain/LIFE+QUIC Reno/LIFE,56.506
+rain/LIFE+QUIC Reno/QUIC Reno,3.899
+rain/LIFE+QUIC BBR/LIFE,5.530
+rain/LIFE+QUIC BBR/QUIC BBR,56.525
+rain/LIFE+QUIC Copa/LIFE,54.819
+rain/LIFE+QUIC Copa/QUIC Copa,7.072
+rain/LIFE+QUIC Cubic/LIFE,52.968
+rain/LIFE+QUIC Cubic/QUIC Cubic,4.809
+rain/LIFE+SATPIPE/LIFE,6.631
+rain/LIFE+SATPIPE/SATPIPE,55.307
+rain/LIFE+SaTCP/LIFE,56.623
+rain/LIFE+SaTCP/SaTCP,3.675
+random_loss/LIFE+QUIC BBRv2/LIFE,56.615
+random_loss/LIFE+QUIC BBRv2/QUIC BBRv2,36.857
+random_loss/LIFE+PCC/PCC,24.860
+random_loss/LIFE+PCC/LIFE,69.241
+random_loss/LIFE+QUIC Reno/LIFE,80.907
+random_loss/LIFE+QUIC Reno/QUIC Reno,4.921
+random_loss/LIFE+QUIC BBR/LIFE,8.846
+random_loss/LIFE+QUIC BBR/QUIC BBR,84.365
+random_loss/LIFE+QUIC Copa/LIFE,81.065
+random_loss/LIFE+QUIC Copa/QUIC Copa,12.418
+random_loss/LIFE+QUIC Cubic/LIFE,82.173
+random_loss/LIFE+QUIC Cubic/QUIC Cubic,6.097
+random_loss/LIFE+SATPIPE/LIFE,22.355
+random_loss/LIFE+SATPIPE/SATPIPE,71.112
+random_loss/LIFE+SaTCP/LIFE,86.083
+random_loss/LIFE+SaTCP/SaTCP,5.886
+reconfig&hadover/LIFE+QUIC BBRv2/LIFE,45.339
+reconfig&hadover/LIFE+QUIC BBRv2/QUIC BBRv2,31.281
+reconfig&hadover/LIFE+PCC/PCC,3.678
+reconfig&hadover/LIFE+PCC/LIFE,78.468
+reconfig&hadover/LIFE+QUIC Reno/LIFE,26.235
+reconfig&hadover/LIFE+QUIC Reno/QUIC Reno,55.881
+reconfig&hadover/LIFE+QUIC BBR/LIFE,5.453
+reconfig&hadover/LIFE+QUIC BBR/QUIC BBR,77.449
+reconfig&hadover/LIFE+QUIC Copa/LIFE,32.406
+reconfig&hadover/LIFE+QUIC Copa/QUIC Copa,36.959
+reconfig&hadover/LIFE+QUIC Cubic/LIFE,3.983
+reconfig&hadover/LIFE+QUIC Cubic/QUIC Cubic,45.743
+reconfig&hadover/LIFE+SATPIPE/LIFE,26.279
+reconfig&hadover/LIFE+SATPIPE/SATPIPE,55.468
+reconfig&hadover/LIFE+SaTCP/LIFE,11.658
+reconfig&hadover/LIFE+SaTCP/SaTCP,70.700
+standard/LIFE+QUIC BBRv2/LIFE,77.385
+standard/LIFE+QUIC BBRv2/QUIC BBRv2,2.836
+standard/LIFE+PCC/PCC,4.911
+standard/LIFE+PCC/LIFE,75.056
+standard/LIFE+QUIC Reno/LIFE,76.814
+standard/LIFE+QUIC Reno/QUIC Reno,4.074
+standard/LIFE+QUIC BBR/LIFE,18.574
+standard/LIFE+QUIC BBR/QUIC BBR,62.909
+standard/LIFE+QUIC Copa/LIFE,70.426
+standard/LIFE+QUIC Copa/QUIC Copa,7.716
+standard/LIFE+QUIC Cubic/LIFE,75.367
+standard/LIFE+QUIC Cubic/QUIC Cubic,5.879
+standard/LIFE+SATPIPE/LIFE,34.463
+standard/LIFE+SATPIPE/SATPIPE,46.914
+standard/LIFE+SaTCP/LIFE,72.895
+standard/LIFE+SaTCP/SaTCP,6.477

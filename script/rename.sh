@@ -10,6 +10,7 @@ TARGET_DIRS=(
   "./origin_data/intra-protocol/2flow"
   "./origin_data/intra-protocol/3flow"
   "./origin_data/inter-protocol"
+  "./origin_data/network_impact"
 )
 
 # 递归处理目录函数

@@ -53,8 +53,12 @@ config_changes = [
 def parse_pcc_log_files(directory, max_time=120, bin_width=1.0):
     """Parse PCC log files and extract SendRate data"""
     results = {}
-    pattern = os.path.join(directory, '**', 'pcc_log')
+    pattern = os.path.join(directory, '**', 'PCC')
     for filepath in glob.glob(pattern, recursive=True):
+        # Skip directories, only process regular files
+        if not os.path.isfile(filepath):
+            continue
+
         name = os.path.basename(os.path.dirname(filepath)) or "pcc"
         times, sendrates = [], []
         with open(filepath, 'r') as f:
