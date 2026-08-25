@@ -1,0 +1,17 @@
+[16:58:24] rain_ns started, seed=55555
+[16:58:24] rain initial: bw=100mbit delay=15ms down_loss=0.4% up_loss=0.45%
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+[16:58:27] activation at +0s (disturbance timer starts)
+[16:59:28] rain disturb: bw=33mbit down_loss=1.02% up_loss=0.55%
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+[16:59:43] rain disturb: bw=33mbit down_loss=1.19% up_loss=1.20%
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+[16:59:58] rain disturb: bw=33mbit down_loss=0.63% up_loss=1.01%
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+[17:00:13] rain disturb: bw=33mbit down_loss=1.25% up_loss=0.62%
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.

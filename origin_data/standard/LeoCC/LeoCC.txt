@@ -1,0 +1,32 @@
+# LeoCC TCP CCA — standard scenario (120s, trigger-aligned)
+# Collected: 2026-05-13
+# Kernel: Linux 6.13.7+ (BBRv3-derived, ICSK_CA_PRIV_SIZE=256)
+# Platform: Lima VZ Ubuntu 22.04 ARM64 VM, 4 CPU, 6 GiB RAM
+# Network: nsA--nsB--nsC topology, tc/netem + custom351.dist
+# Seed: 55555, Montplier.json (4369 byHour entries)
+# CCA parameters: min_rtt_fluctuation=10000 offset=12000
+# Note: offset=12000 performed better than offset=14000 (15.16 vs 9.37 Mbps)
+
+option seed :55555
+option duration :120
+option cca :leocc
+option min_rtt_fluctuation :10000
+option offset :12000
+option json_file :Montplier.json
+option delay_distribution :custom351
+option up_loss_rate :0.45%
+option down_loss_rate :0.4%
+option jitter :5ms
+option jitter_correlation :70%
+
+# Summary (offset=12000)
+sent_mbps :15.16
+received_mbps :14.93
+retransmits :5432
+max_snd_cwnd :537208
+min_rtt_us :27092
+mean_rtt_us :36394
+max_rtt_us :44179
+network_updates :9
+
+# For reference: with offset=14000 sent=9.37 received=9.13 retransmits=4948

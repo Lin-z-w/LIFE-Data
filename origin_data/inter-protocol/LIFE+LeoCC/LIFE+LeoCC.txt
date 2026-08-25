@@ -1,0 +1,22 @@
+# LIFE vs LeoCC inter-protocol fairness — standard scenario (120s, trigger-aligned)
+# LIFE (QUIC/xqperf) competing with LeoCC (TCP/iperf3 -R)
+# Collected: 2026-05-13
+# Seed: 55555, Montplier.json, custom351.dist
+# LIFE: xqperf_server -L 120 -s 100MB, DELAY_OFFSET=100000
+# LeoCC: iperf3 -R -C leocc, min_rtt_fluctuation=10000 offset=12000
+
+option seed :55555
+option duration :120
+option scenario :standard (dynamic BW/RTT, baseline loss, jitter 5ms, custom351)
+
+# LIFE (QUIC)
+life_avg_mbps :41.42
+life_samples :86
+life_delay_offset :100000
+
+# LeoCC (TCP)
+leocc_mbps :12.38
+leocc_retransmits :6355
+
+# Jain Fairness Index
+jain_index :0.774

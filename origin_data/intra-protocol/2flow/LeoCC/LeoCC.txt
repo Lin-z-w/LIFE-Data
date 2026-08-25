@@ -1,0 +1,21 @@
+# LeoCC intra-protocol fairness — standard scenario (120s, trigger-aligned)
+# Two LeoCC flows sharing same bottleneck
+# Collected: 2026-05-13
+# Seed: 55555, Montplier.json, custom351.dist
+# CCA: leocc (min_rtt_fluctuation=10000 offset=12000)
+
+option seed :55555
+option duration :120
+option cca :leocc
+option scenario :standard (dynamic BW/RTT, baseline loss, jitter 5ms, custom351)
+
+# Flow 1
+flow1_sent_mbps :6.33
+flow1_retransmits :4658
+
+# Flow 2
+flow2_sent_mbps :7.76
+flow2_retransmits :5929
+
+# Jain Fairness Index
+jain_index :0.990

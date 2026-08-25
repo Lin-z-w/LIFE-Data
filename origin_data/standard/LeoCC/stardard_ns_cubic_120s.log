@@ -1,0 +1,42 @@
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:37:12 - config updated: bandwidth=85.42mbit delay=20.25ms*2 up_loss=0.45% down_loss=0.4% index=3127
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:37:27 - config updated: bandwidth=72.80mbit delay=19.70ms*2 up_loss=0.45% down_loss=0.4% index=3128
+handover
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:37:42 - config updated: bandwidth=110.14mbit delay=15.84ms*2 up_loss=0.45% down_loss=0.4% index=3129
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:37:57 - config updated: bandwidth=105.71mbit delay=14.63ms*2 up_loss=0.45% down_loss=0.4% index=3130
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:38:12 - config updated: bandwidth=63.93mbit delay=18.57ms*2 up_loss=0.45% down_loss=0.4% index=3131
+handover
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:38:27 - config updated: bandwidth=92.89mbit delay=17.10ms*2 up_loss=0.45% down_loss=0.4% index=3132
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:38:42 - config updated: bandwidth=80.37mbit delay=18.57ms*2 up_loss=0.45% down_loss=0.4% index=3133
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:38:57 - config updated: bandwidth=98.54mbit delay=19.81ms*2 up_loss=0.45% down_loss=0.4% index=3134
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:39:12 - config updated: bandwidth=74.87mbit delay=16.01ms*2 up_loss=0.45% down_loss=0.4% index=3135
+reconfig
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+18:39:27 - config updated: bandwidth=85.38mbit delay=20.72ms*2 up_loss=0.45% down_loss=0.4% index=3136

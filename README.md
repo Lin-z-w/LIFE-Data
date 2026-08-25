@@ -1,5 +1,7 @@
 # LIFE-Data
 
+本仓库保存 LIFE 论文的实验数据和基础绘图脚本。ICNP 2026 camera-ready 版本的数据沿革和本地大型原始运行目录说明见 [`CAMERA_READY_DATA.md`](CAMERA_READY_DATA.md)。
+
 ## 各数据集测试场景
 
 - combine、inter&intra：动态带宽、动态时延、seed=55555，UP_LOSS_RATE=0.45%、DOWN_LOSS_RATE=0.4%、jitter=5ms、30s 75s卫星切换事件。
@@ -11,3 +13,5 @@
 ## 图像绘制
 
 在仓库根目录运行`./script/plot_all.sh`即可
+
+最终 camera-ready 图表使用的绘图脚本保存在论文源仓库的 `scripts/` 目录中。`camera_ready/` 下的完整原始运行约 52 GB，作为本地归档保留，不纳入普通 Git 同步。

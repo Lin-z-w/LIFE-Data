@@ -1,0 +1,22 @@
+# LeoCC TCP CCA — random_loss scenario (120s, trigger-aligned)
+# Collected: 2026-05-13
+# Kernel: Linux 6.13.7+ (BBRv3-derived, ICSK_CA_PRIV_SIZE=256)
+# Platform: Lima VZ Ubuntu 22.04 ARM64 VM, 4 CPU, 6 GiB RAM
+# Network: nsA--nsB--nsC namespace topology
+# Seed: 55555
+# CCA parameters: min_rtt_fluctuation=10000 offset=12000
+
+option seed :55555
+option duration :120
+option cca :leocc
+option bandwidth :100mbit
+option rtt :30ms
+option down_loss_rate :0.4%
+option up_loss_rate :0.45%
+
+# Summary
+sent_bytes :353901952
+sent_mbps :94.16
+received_bytes :353131648
+received_mbps :93.93
+retransmits :4270

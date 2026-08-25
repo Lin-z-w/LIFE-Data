@@ -1,0 +1,3 @@
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+[16:52:10] random_loss link ready: bw=100mbit rtt=30ms down_loss=0.4% up_loss=0.45%

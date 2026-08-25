@@ -1,0 +1,1 @@
+sent_mbps=94.16 received_mbps=93.93 retransmits=4270

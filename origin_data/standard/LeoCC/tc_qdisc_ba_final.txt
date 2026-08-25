@@ -1,0 +1,2 @@
+qdisc htb 1: root refcnt 5 r2q 10 default 0x1 direct_packets_stat 1 direct_qlen 1000
+qdisc netem 10: parent 1:1 limit 1000 delay 16ms  5ms 70% loss 0.4%

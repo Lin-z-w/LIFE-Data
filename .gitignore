@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Large local camera-ready experiment archives
+/camera_ready/
+/origin_data/sensitivity/
+/origin_data/throughput/random_loss rain congest reconfig_handover/
